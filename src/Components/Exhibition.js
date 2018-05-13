@@ -15,8 +15,12 @@ class Exhibition extends Component {
         super(props);
 
         this.state = {
-            showShare: false
-        }
+            showShare: false,
+            dayOneActive: false,
+            dayTwoActive: false,
+            dayThreeActive: false,
+            dayFourActive: false
+        };
     }
 
     shareToggleHandler = () => {

@@ -382,6 +382,26 @@ svg {
     &:last-child {
       border-bottom: 0;
     }
+
+    &.isDisabled {
+
+      a {
+        color: #ccc;
+        pointer-events: none;
+
+        span {
+          display: block;
+          text-shadow: 2px 2px 4px rgba(#000, .7);
+        }
+      }
+
+      .overlay {
+
+        &::after {
+          opacity: .5;
+        }
+      }
+    }
   }
 
   .overlay {
@@ -414,6 +434,7 @@ svg {
     position: relative;
     z-index: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -423,6 +444,7 @@ svg {
     font-weight: bold;
     color: $color-light;
     cursor: pointer;
+    pointer-events: auto;
 
     &:hover,
     &:active,
@@ -437,17 +459,23 @@ svg {
 
       }
     }
+
+    span {
+      display: none;
+    }
   }
 
   p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
+    display: block;
+    margin: 10px;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //width: 200px;
     font-size: 32px;
     text-shadow: 2px 2px 4px rgba(#000, .7);
-    background-color: rgba(0,0,0,0);
-    transition: opacity .4s ease;
+    //background-color: rgba(0,0,0,0);
+    //transition: opacity .4s ease;
   }
 
   // >= 768
@@ -845,6 +873,12 @@ svg {
 .photo {
   //margin: 0 0 10px 0;
   padding: 8px 10px;
+
+  &.isDisabled {
+    color: #666;
+    border-color: #666;
+    pointer-events: none;
+  }
 
   // 1024
   @media screen and (min-width: 1024px) {
