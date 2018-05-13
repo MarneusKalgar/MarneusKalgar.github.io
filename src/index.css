@@ -42,11 +42,11 @@ svg {
   z-index: 4; }
 
 .container {
-  margin-top: 80px;
+  padding-top: 90px;
   overflow: hidden; }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     .container {
-      margin-top: 110px; } }
+      padding-top: 110px; } }
 
 .wrapper {
   margin: 0 20px;
@@ -69,28 +69,65 @@ svg {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5); }
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #005587;
+  background-color: transparent;
+  border: 1px solid #005587;
+  transition: all .4s ease; }
+  .button:hover, .button:active, .button:focus {
+    color: #fff;
+    background-color: #005587; }
+
 .header {
   position: fixed;
   left: 0;
   top: 0;
   z-index: 10;
   width: 100%;
-  height: 80px;
+  height: 90px;
   padding: 10px 20px;
   background-color: #fff;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3); }
   .header ul {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%; }
+  .header li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(100% - 100px); }
+    .header li:nth-child(1) {
+      order: 1; }
+    .header li:nth-child(2) {
+      order: 2; }
+  .header .row {
+    height: 100%;
+    width: 100px;
+    order: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; }
   .header .toggler {
     position: relative;
-    width: 30px;
-    height: 30px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color .4s ease; }
+    transition: all .4s ease; }
     .header .toggler::hover, .header .toggler:active, .header .toggler:focus {
       background-color: #005587; }
       .header .toggler::hover svg, .header .toggler:active svg, .header .toggler:focus svg {
@@ -104,16 +141,24 @@ svg {
     .header .toggler span {
       display: none; }
     .header .toggler.isActive {
+      color: #fff;
       background-color: #005587; }
       .header .toggler.isActive svg {
         fill: #fff; }
-  .header .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; }
   @media screen and (min-width: 768px) {
-    .header .row {
-      min-width: 100px; } }
+    .header {
+      height: 110px; }
+      .header ul {
+        flex-direction: row;
+        align-items: center; }
+      .header li {
+        align-items: center;
+        justify-content: center;
+        width: auto; }
+      .header .row {
+        min-width: 200px; }
+      .header .toggler {
+        display: none; } }
   @media screen and (min-width: 1024px) {
     .header {
       padding-left: 5%;
@@ -130,43 +175,46 @@ svg {
         .header .toggler.isActive {
           background-color: transparent; }
       .header .row {
+        min-width: 1px;
+        width: auto;
         flex-direction: row;
         align-items: center; } }
   @media screen and (min-width: 1280px) {
     .header {
-      height: 110px;
-      padding-left: 10%;
-      padding-right: 10%; }
+      padding-left: 5%;
+      padding-right: 5%; }
       .header span {
         font-size: 16px; } }
   @media screen and (min-width: 1600px) {
     .header {
-      padding-left: 15%;
-      padding-right: 15%; } }
+      padding-left: 10%;
+      padding-right: 10%; } }
 
 .logo {
   display: block;
   width: 100%;
-  max-width: 300px;
-  min-width: 170px;
-  margin-right: 5px; }
+  max-width: 170px; }
   @media screen and (min-width: 768px) {
     .logo {
-      min-width: 250px; } }
+      min-width: 280px; } }
   @media screen and (min-width: 1280px) {
     .logo {
-      width: 30%;
-      max-width: 450px; } }
+      min-width: 320px; } }
 
 .logo-at {
   display: block;
-  width: 90px;
-  margin-left: 5px; }
+  width: 70px; }
+  @media screen and (min-width: 768px) {
+    .logo-at {
+      width: 90px; } }
+  @media screen and (min-width: 1280px) {
+    .logo-at {
+      width: 110px; } }
 
 .nav {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   z-index: 2;
   overflow: hidden;
   transform: scaleY(1);
@@ -234,6 +282,9 @@ svg {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background-color: transparent;
     transition: opacity .4s ease; }
+  @media screen and (min-width: 768px) {
+    .nav {
+      height: calc(100vh - 110px); } }
   @media screen and (max-width: 767px) and (orientation: landscape), (min-width: 1280px) {
     .nav ul {
       flex-direction: row; }
@@ -259,10 +310,8 @@ svg {
         border-right: 2px solid #fff;
         border-bottom: 0; } }
   @media screen and (min-width: 1280px) {
-    .nav {
-      height: calc(100vh - 110px); }
-      .nav p {
-        font-size: 36px; } }
+    .nav p {
+      font-size: 36px; } }
 
 .breadcrumbs ul {
   display: flex;
@@ -370,6 +419,14 @@ svg {
     background-color: #fff;
     transform: translate3d(100%, 0, 0);
     transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1); }
+    .share .list ul {
+      display: flex;
+      flex-direction: row;
+      max-width: 400px;
+      margin: 0 auto; }
+    .share .list li {
+      width: calc(100% / 3 - 20px);
+      margin: 10px; }
     .share .list.isVisible {
       transform: translate3d(0, 0, 0);
       pointer-events: auto; }
@@ -378,19 +435,18 @@ svg {
     font-size: 14px;
     font-weight: 600;
     color: #1f1f1f; }
-  .share ul {
-    display: flex;
-    max-width: 400px;
-    margin: 0 auto; }
-  .share li {
-    margin: 10px; }
   @media screen and (min-width: 768px) {
     .share {
-      overflow: hidden; }
+      position: static;
+      width: auto;
+      pointer-events: auto; }
       .share .list {
-        transform: translate3d(0, -100%, 0); }
+        padding: 0;
+        transform: none; }
+        .share .list li {
+          margin: 0 5px; }
         .share .list.isVisible {
-          transform: translate3d(0, 0, 0); } }
+          transform: none; } }
   @media screen and (min-width: 1024px) {
     .share p {
       display: none; } }
@@ -400,7 +456,9 @@ svg {
   align-items: center;
   justify-content: center;
   width: 45px;
+  min-width: 45px;
   height: 45px;
+  margin: 0 auto;
   border: 1px solid #005587;
   cursor: pointer;
   transition: background-color .4s ease; }
@@ -423,22 +481,10 @@ svg {
   .articles-nav a {
     display: inline-flex;
     align-items: center;
-    padding: 15px 35px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #005587;
-    background-color: transparent;
-    border: 1px solid #005587;
-    transition: all .4s ease; }
-    .articles-nav a:hover, .articles-nav a:active, .articles-nav a:focus {
-      color: #fff;
-      background-color: #005587; }
-      .articles-nav a:hover svg, .articles-nav a:active svg, .articles-nav a:focus svg {
-        fill: #fff;
-        stroke: #fff; }
+    padding: 15px 35px; }
+    .articles-nav a:hover svg, .articles-nav a:active svg, .articles-nav a:focus svg {
+      fill: #fff;
+      stroke: #fff; }
     .articles-nav a svg {
       fill: #005587;
       stroke: #005587;
@@ -458,31 +504,14 @@ svg {
         margin-right: 30px; } }
 
 .photo {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  color: #005587; }
-  .photo svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    fill: #005587; }
-  .photo span {
-    display: none;
-    font-size: 14px; }
+  padding: 8px 10px; }
   @media screen and (min-width: 1024px) {
     .photo {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      width: auto;
-      margin-right: 10px; }
-      .photo svg {
-        display: none; }
-      .photo span {
-        display: block;
-        margin-right: 5px; } }
+      height: 45px;
+      margin-right: 20px;
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media screen and (min-width: 1280px) {
-    .photo span {
+    .photo {
+      margin-right: 40px;
       font-size: 16px; } }

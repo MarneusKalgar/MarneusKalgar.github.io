@@ -14,25 +14,25 @@ const Nav = () => {
                     <NavLink to="/day-one">
                         <p>День 1</p>
                     </NavLink>
-                    <div className="overlay" style={{backgroundImage: "url(" + day1 + ")"}}></div>
+                    <div className="overlay" style={{backgroundImage: "url(" + day1 + ")"}} />
                 </li>
                 <li>
                     <NavLink to="/day-two">
                         <p>День 2</p>
                     </NavLink>
-                    <div className="overlay" style={{backgroundImage: "url(" + day2 + ")"}}></div>
+                    <div className="overlay" style={{backgroundImage: "url(" + day2 + ")"}} />
                 </li>
                 <li>
                     <NavLink to="/day-three">
                         <p>День 3</p>
                     </NavLink>
-                    <div className="overlay" style={{backgroundImage: "url(" + day3 + ")"}}></div>
+                    <div className="overlay" style={{backgroundImage: "url(" + day3 + ")"}} />
                 </li>
                 <li>
                     <NavLink to="/day-four">
                         <p>День 4</p>
                     </NavLink>
-                    <div className="overlay" style={{backgroundImage: "url(" + day4+ ")"}}></div>
+                    <div className="overlay" style={{backgroundImage: "url(" + day4+ ")"}} />
                 </li>
             </ul>
         </nav>

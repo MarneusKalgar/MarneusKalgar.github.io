@@ -63,12 +63,12 @@ svg {
 
 //== BEGIN CONTAINER
 .container {
-  margin-top: 80px;
+  padding-top: 90px;
   overflow: hidden;
   
-  // >= 1280
-  @media screen and (min-width: 1280px) {
-    margin-top: 110px;
+  // >= 768
+  @media screen and (min-width: 768px) {
+    padding-top: 110px;
   }
 }
 //== END CONTAINER
@@ -108,6 +108,31 @@ svg {
 //== END BACKDROP
 
 
+//== BEGIN BUTTON
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-primary;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid $color-primary;
+  transition: all .4s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-light;
+    background-color: $color-primary;
+  }
+}
+//== END BUTTON
+
+
 //== BEGIN HEADER
 .header {
   position: fixed;
@@ -120,26 +145,59 @@ svg {
   //-ms-grid-rows: 1fr;
   //grid-gap: 10px 10px;
   width: 100%;
-  height: 80px;
+  height: 90px;
   padding: 10px 20px;
   background-color: $color-light;
   box-shadow: 0 0 20px 0px rgba(#000, .3);
 
   ul {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    //align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     //margin: 0 -2.5px;
   }
 
+  li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(100% - 100px);
+    //width: calc(100% / 3);
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+
+  .row {
+    //width: 100%;
+    height: 100%;
+    width: 100px;
+    order: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
   .toggler {
     position: relative;
-    width: 30px;
-    height: 30px;
+    //width: 30px;
+    //height: 30px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color .4s ease;
+    transition: all .4s ease;
 
     &::hover,
     &:active,
@@ -164,6 +222,7 @@ svg {
     }
 
     &.isActive {
+      color: $color-light;
       background-color: $color-primary;
 
       svg {
@@ -172,17 +231,27 @@ svg {
     }
   }
 
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
   // >= 768
   @media screen and (min-width: 768px) {
+    height: 110px;
+
+    ul {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    li {
+      align-items: center;
+      justify-content: center;
+      width: auto;
+    }
 
     .row {
-      min-width: 100px;
+      min-width: 200px;
+    }
+
+    .toggler {
+      display: none;
     }
   }
 
@@ -211,6 +280,8 @@ svg {
     }
 
     .row {
+      min-width: 1px;
+      width: auto;
       flex-direction: row;
       align-items: center;
     }
@@ -218,9 +289,9 @@ svg {
 
   // >= 1280
   @media screen and (min-width: 1280px) {
-    height: 110px;
-    padding-left: 10%;
-    padding-right: 10%;
+    //height: 110px;
+    padding-left: 5%;
+    padding-right: 5%;
 
     span {
       font-size: 16px;
@@ -229,8 +300,8 @@ svg {
 
   // >= 1600
   @media screen and (min-width: 1600px) {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 //== END HEADER
@@ -240,20 +311,21 @@ svg {
 .logo {
   display: block;
   width: 100%;
-  max-width: 300px;
-  min-width: 170px;
+  max-width: 170px;
+  //max-width: 300px;
+  //min-width: 170px;
   //padding: 0 5px;
-  margin-right: 5px;
+  //margin-right: 5px;
 
   // >= 768
   @media screen and (min-width: 768px) {
-    min-width: 250px;
+    min-width: 280px;
   }
 
   // >= 1280
   @media screen and (min-width: 1280px) {
-    width: 30%;
-    max-width: 450px;
+    //width: 30%;
+    min-width: 320px;
     //padding: 0;
   }
 }
@@ -264,13 +336,18 @@ svg {
 .logo-at {
   display: block;
   //max-width: 125px;
-  width: 90px;
+  width: 70px;
   //padding: 0 10px;
-  margin-left: 5px;
+  //margin-left: 5px;
+
+  // >= 768
+  @media screen and (min-width: 768px) {
+    width: 90px;
+  }
 
   // >= 1280
   @media screen and (min-width: 1280px) {
-    //padding: 0;
+    width: 110px;
   }
 }
 //== END LOGO-AT
@@ -280,7 +357,7 @@ svg {
 .nav {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   z-index: 2;
   overflow: hidden;
   transform: scaleY(1);
@@ -372,6 +449,11 @@ svg {
     background-color: rgba(0,0,0,0);
     transition: opacity .4s ease;
   }
+
+  // >= 768
+  @media screen and (min-width: 768px) {
+    height: calc(100vh - 110px);
+  }
   
   // <= 767 || >= 1024
   @media screen and (max-width: 767px) and (orientation: landscape), (min-width: 1280px) {
@@ -421,7 +503,7 @@ svg {
 
   // >= 1280
   @media screen and (min-width: 1280px) {
-    height: calc(100vh - 110px);
+    //height: calc(100vh - 110px);
 
     p {
       font-size: 36px;
@@ -603,6 +685,18 @@ svg {
     transition: transform .4s cubic-bezier(0, .52, 0, 1);
     //box-shadow: 0 10px 20px -10px rgba(#000, .3);
 
+    ul {
+      display: flex;
+      flex-direction: row;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  
+    li {
+      width: calc(100% / 3 - 20px);
+      margin: 10px;
+    }
+
     &.isVisible {
       transform: translate3d(0,0,0);
       pointer-events: auto;
@@ -617,25 +711,27 @@ svg {
     color: $color-dark;
   }
 
-  ul {
-    display: flex;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+  
 
-  li {
-    margin: 10px;
-  }
-
-  // 768
+  // 768px
   @media screen and (min-width: 768px) {
-    overflow: hidden;
+    //overflow: hidden;
+    position: static;
+    width: auto;
+    pointer-events: auto;
 
     .list {
-      transform: translate3d(0, -100%, 0);
+      padding: 0;
+      transform: none;
+      //transform: translate3d(0, -100%, 0);
+
+      li {
+        margin: 0 5px;
+      }
 
       &.isVisible {
-        transform: translate3d(0,0,0);
+        transform: none;
+        //transform: translate3d(0,0,0);
       }
     }
 
@@ -658,7 +754,9 @@ svg {
   align-items: center;
   justify-content: center;
   width: 45px;
+  min-width: 45px;
   height: 45px;
+  margin: 0 auto;
   border: 1px solid $color-primary;
   cursor: pointer;
   transition: background-color .4s ease;
@@ -698,21 +796,10 @@ svg {
     display: inline-flex;
     align-items: center;
     padding: 15px 35px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    line-height: 1;
-    text-transform: uppercase;
-    color: $color-primary;
-    background-color: rgba(0,0,0,0);
-    border: 1px solid $color-primary;
-    transition: all .4s ease;
 
     &:hover,
     &:active,
     &:focus {
-      color: $color-light;
-      background-color: $color-primary;
 
       svg {
         fill: $color-light;
@@ -756,54 +843,72 @@ svg {
 
 //== BEGIN PHOTO
 .photo {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  color: $color-primary;
-
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    fill: $color-primary;
-  }
-
-  span {
-    display: none;
-    font-size: 14px;
-  }
+  //margin: 0 0 10px 0;
+  padding: 8px 10px;
 
   // 1024
   @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: auto;
-    margin-right: 10px;
-
-    svg {
-      display: none;
-      //position: static;
-      //transform: none;
-      //margin-left: 5px;
-    }
-
-    span {
-      display: block;
-      margin-right: 5px;
-    }
+    height: 45px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   // 1280
   @media screen and (min-width: 1280px) {
-    
-    span {
-      font-size: 16px;
-    }
+    margin-right: 40px;
+    font-size: 16px;
   }
 }
+// .photo {
+//   position: relative;
+//   width: 30px;
+//   height: 30px;
+//   color: $color-primary;
+// 
+// 
+//   svg {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     fill: $color-primary;
+//   }
+// 
+//   span {
+//     display: none;
+//     font-size: 14px;
+//   }
+// 
+//   // 1024
+//   @media screen and (min-width: 1024px) {
+//     display: flex;
+//     flex-direction: row-reverse;
+//     align-items: center;
+//     width: auto;
+//     margin-right: 10px;
+// 
+//     svg {
+//       display: none;
+//       //position: static;
+//       //transform: none;
+//       //margin-left: 5px;
+//     }
+// 
+//     span {
+//       display: block;
+//       margin-right: 5px;
+//     }
+//   }
+// 
+//   // 1280
+//   @media screen and (min-width: 1280px) {
+//     
+//     span {
+//       font-size: 16px;
+//     }
+//   }
+// }
 //== END PHOTO
 
 //== BEGIN PHOTOS

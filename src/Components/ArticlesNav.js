@@ -9,7 +9,7 @@ const articlesNav = (props) => {
         links = (
             <ul>
                 <li>
-                    <Link to="/day-two" className="next">
+                    <Link to="/day-two" className="button next">
                         <span>День 2</span>
                         {svgIcon}
                     </Link>
@@ -20,13 +20,13 @@ const articlesNav = (props) => {
         links = (
             <ul>
                 <li>
-                    <Link to="/day-one" className="prev">
+                    <Link to="/day-one" className="button prev">
                         {svgIcon}
                         <span>День 1</span>
                 </Link>
                 </li>
                 <li>
-                    <Link to="/day-three" className="next">
+                    <Link to="/day-three" className="button next">
                     <span>День 3</span>
                     {svgIcon}
                 </Link>
@@ -37,13 +37,13 @@ const articlesNav = (props) => {
         links = (
             <ul>
                 <li>
-                    <Link to="/day-two" className="prev">
+                    <Link to="/day-two" className="button prev">
                         {svgIcon}
                         <span>День 2</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/day-four" className="next">
+                    <Link to="/day-four" className="button next">
                         <span>День 4</span>
                         {svgIcon}
                     </Link>
@@ -54,7 +54,7 @@ const articlesNav = (props) => {
         links = (
             <ul>
                 <li>
-                    <Link to="/day-three" className="prev">
+                    <Link to="/day-three" className="button prev">
                         {svgIcon}
                         <span>День 3</span>
                     </Link>

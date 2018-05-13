@@ -1,10 +1,6 @@
 import React from 'react';
 
-import {
-    FacebookShareButton,
-    GooglePlusShareButton,
-    TwitterShareButton,
-} from 'react-share';
+import { FacebookShareButton, GooglePlusShareButton, TwitterShareButton } from 'react-share';
 
 const share = (props) => {
     let listClass;
@@ -17,7 +13,7 @@ const share = (props) => {
     return (
         <div className="share">
             <div className={listClass}>
-                <p>Поделиться: </p>
+                {/* <p>Поделиться: </p> */}
                 <ul>
                     <li>
                         <FacebookShareButton url={props.url}>
