@@ -25,12 +25,25 @@ h3 {
   margin: 0;
   color: #1f1f1f; }
 
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0; }
+  button:hover, button:active, button:focus {
+    outline: none; }
+
+svg {
+  pointer-events: none;
+  transition: fill .4s ease; }
+
 .app {
   position: relative;
   z-index: 4; }
 
 .container {
-  margin-top: 80px; }
+  margin-top: 80px;
+  overflow: hidden; }
   @media screen and (min-width: 1280px) {
     .container {
       margin-top: 110px; } }
@@ -47,28 +60,85 @@ h3 {
       margin-left: auto;
       margin-right: auto; } }
 
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 .header {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 10;
   width: 100%;
   height: 80px;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #fff;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3); }
+  .header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  .header .toggler {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color .4s ease; }
+    .header .toggler::hover, .header .toggler:active, .header .toggler:focus {
+      background-color: #005587; }
+      .header .toggler::hover svg, .header .toggler:active svg, .header .toggler:focus svg {
+        fill: #fff; }
+    .header .toggler svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: #005587; }
+    .header .toggler span {
+      display: none; }
+    .header .toggler.isActive {
+      background-color: #005587; }
+      .header .toggler.isActive svg {
+        fill: #fff; }
+  .header .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+  @media screen and (min-width: 768px) {
+    .header .row {
+      min-width: 100px; } }
   @media screen and (min-width: 1024px) {
     .header {
       padding-left: 5%;
-      padding-right: 5%; } }
+      padding-right: 5%; }
+      .header .toggler {
+        width: auto;
+        margin-left: 10px; }
+        .header .toggler svg {
+          display: none; }
+        .header .toggler span {
+          display: inline-block;
+          text-decoration: underline;
+          color: #005587; }
+        .header .toggler.isActive {
+          background-color: transparent; }
+      .header .row {
+        flex-direction: row;
+        align-items: center; } }
   @media screen and (min-width: 1280px) {
     .header {
       height: 110px;
       padding-left: 10%;
-      padding-right: 10%; } }
+      padding-right: 10%; }
+      .header span {
+        font-size: 16px; } }
   @media screen and (min-width: 1600px) {
     .header {
       padding-left: 15%;
@@ -78,20 +148,20 @@ h3 {
   display: block;
   width: 100%;
   max-width: 300px;
-  padding: 0 10px; }
+  min-width: 170px;
+  margin-right: 5px; }
+  @media screen and (min-width: 768px) {
+    .logo {
+      min-width: 250px; } }
   @media screen and (min-width: 1280px) {
     .logo {
       width: 30%;
-      max-width: 450px;
-      padding: 0; } }
+      max-width: 450px; } }
 
 .logo-at {
   display: block;
-  max-width: 125px;
-  padding: 0 10px; }
-  @media screen and (min-width: 1280px) {
-    .logo-at {
-      padding: 0; } }
+  width: 90px;
+  margin-left: 5px; }
 
 .nav {
   position: relative;
@@ -216,6 +286,10 @@ h3 {
   .breadcrumbs a:hover, .breadcrumbs a:active, .breadcrumbs a:focus {
     color: #6c6c6c; }
 
+@media screen and (min-width: 768px) {
+  .breadcrumbs ul {
+    margin: 0; } }
+
 .article {
   text-align: left;
   color: #606060;
@@ -285,18 +359,41 @@ h3 {
       font-size: 16px; } }
 
 .share {
-  margin-top: 30px; }
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 0;
+  width: 100vw;
+  pointer-events: none; }
+  .share .list {
+    padding: 10px;
+    background-color: #fff;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1); }
+    .share .list.isVisible {
+      transform: translate3d(0, 0, 0);
+      pointer-events: auto; }
   .share p {
-    display: inline-block;
     margin: 0;
     font-size: 14px;
     font-weight: 600;
     color: #1f1f1f; }
   .share ul {
     display: flex;
-    margin: 0 -10px; }
+    max-width: 400px;
+    margin: 0 auto; }
   .share li {
     margin: 10px; }
+  @media screen and (min-width: 768px) {
+    .share {
+      overflow: hidden; }
+      .share .list {
+        transform: translate3d(0, -100%, 0); }
+        .share .list.isVisible {
+          transform: translate3d(0, 0, 0); } }
+  @media screen and (min-width: 1024px) {
+    .share p {
+      display: none; } }
 
 .SocialMediaShareButton {
   display: flex;
@@ -304,8 +401,6 @@ h3 {
   justify-content: center;
   width: 45px;
   height: 45px;
-  padding: 0;
-  background-color: transparent;
   border: 1px solid #005587;
   cursor: pointer;
   transition: background-color .4s ease; }
@@ -356,38 +451,38 @@ h3 {
   @media screen and (min-width: 768px) {
     .articles-nav {
       margin-left: -30px;
-      margin-right: -30px; }
+      margin-right: -30px;
+      overflow: hidden; }
       .articles-nav li {
         margin-left: 30px;
         margin-right: 30px; } }
 
-.photos {
+.photo {
   position: relative;
-  cursor: pointer; }
-  .photos:hover::before, .photos:hover::after {
-    visibility: hidden;
-    opacity: 0; }
-  .photos::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 6px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    opacity: 1;
-    visibility: visible;
-    transition: all .5s ease; }
-  .photos::after {
-    content: '';
+  width: 30px;
+  height: 30px;
+  color: #005587; }
+  .photo svg {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100px;
-    height: 100px;
-    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOC45MDcgMjguOTA3IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMi42MjUgMjQuMjE1VjUuMjkxSC41MDlBLjUxLjUxIDAgMCAwIDAgNS44djIwLjg5OWEuNTEuNTEgMCAwIDAgLjUwOS41MTFoMjQuMTU1Yy4yODEgMCAuNTEtLjIyOS41MS0uNTExdi0xLjk3NEgzLjEzNmEuNTEuNTEgMCAwIDEtLjUxMS0uNTF6Ii8+PHBhdGggZD0iTTI4LjM5NiAxLjY5OEg0LjI0NGEuNTEuNTEgMCAwIDAtLjUwOS41MDl2MjAuODk4YzAgLjI4Mi4yMjguNTEzLjUwOS41MTNoMjQuMTUzYy4yODEgMCAuNTEtLjIzLjUxLS41MTNWMi4yMDdhLjUxMi41MTIgMCAwIDAtLjUxMS0uNTA5em0tMTcuODk1IDEuOWEyLjcxIDIuNzEgMCAwIDEgMi43MDggMi43MSAyLjcwNiAyLjcwNiAwIDAgMS0yLjcwOCAyLjcwNyAyLjcxIDIuNzEgMCAwIDEgMC01LjQxN3pNMjcuMjUgMTcuMzA2SDUuNjcxdi0uMjA4bDQuMjU4LTQuODY1IDIuMzk2IDEuNjE2IDIuNzkyLTQuNzg1IDMuMjQ0IDIuMyAyLjkzMi02LjA3N0wyNy4yNSAxNy4wOHYuMjI2eiIvPjwvc3ZnPg==") center no-repeat;
-    background-size: contain;
     transform: translate(-50%, -50%);
-    opacity: 1;
-    visibility: visible;
-    transition: all .5s ease; }
+    fill: #005587; }
+  .photo span {
+    display: none;
+    font-size: 14px; }
+  @media screen and (min-width: 1024px) {
+    .photo {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      width: auto;
+      margin-right: 10px; }
+      .photo svg {
+        display: none; }
+      .photo span {
+        display: block;
+        margin-right: 5px; } }
+  @media screen and (min-width: 1280px) {
+    .photo span {
+      font-size: 16px; } }

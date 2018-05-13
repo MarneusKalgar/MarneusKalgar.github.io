@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Breadcrumbs from '../Breadcrumbs';
-import Flickr from '../Flickr';
-import Share from '../Share';
+// import Flickr from '../Flickr';
+// import Share from '../Share';
 import ArticlesNav from '../ArticlesNav';
 
 import mainImage from  '../../images/articles/aquatherm-STK-2017-001.jpg';
 import contentImage from '../../images/articles/aquatherm-STK-2017-050.jpg'
 
-const articleData = {
-    href: "https://www.flickr.com/photos/161517446@N06/sets/72157693411295832",
-    src: "https://c1.staticflickr.com/1/831/41904609291_c1405c9a4f_h.jpg",
-    shareUrl: "https://www.flickr.com/photos/161517446@N06/sets/72157693411295832"
-};
+// const articleData = {
+//     href: "https://www.flickr.com/photos/161517446@N06/sets/72157693411295832",
+//     src: "https://c1.staticflickr.com/1/831/41904609291_c1405c9a4f_h.jpg",
+//     shareUrl: "https://www.flickr.com/photos/161517446@N06/sets/72157693411295832"
+// };
 
 export default class DayOne extends Component {
 
@@ -55,15 +55,15 @@ export default class DayOne extends Component {
                         <p>Наша компания уже давно предлагает затворы такого типа, обращая внимание клиентов на то, что они изготавливаются с корпусами из высокопрочного металла, а это значительно повышает их износостойкость и сопротивление коррозии. Особенно это важно для систем, в которых рабочим веществом является вода или пар. Представленные у нас типы двухэксцентриковых затворов долговечны еще и за счет высокого качества применяемого в них уплотнения, а значит, не требуют постоянного специального обслуживания и проведения частых ремонтных работ.</p>
                     </div>
 
-                    <div className="subsection">
+                    {/* <div className="subsection">
                         <h3>Фотоальбом с первого дня выставки</h3>
                         <p>Переходите в альбом ниже, чтобы скачать фотографии с выставки</p>
                         <Flickr href={articleData.href} src={articleData.src} />
-                    </div>
+                    </div> */}
 
-                    <div className="subsection">
+                    {/* <div className="subsection">
                         <Share url={articleData.shareUrl}/>
-                    </div>
+                    </div> */}
 
                     <div className="subsection">
                         <ArticlesNav prev="zero" />
