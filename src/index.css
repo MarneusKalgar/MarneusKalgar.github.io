@@ -68,6 +68,10 @@ svg {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5); }
+  @media screen and (min-width: 768px) {
+    .backdrop {
+      visibility: hidden;
+      opacity: 0; } }
 
 .button {
   display: flex;
@@ -155,6 +159,8 @@ svg {
         align-items: center;
         justify-content: center;
         width: auto; }
+        .header li:nth-child(1) {
+          width: 280px; }
       .header .row {
         min-width: 200px; }
       .header .toggler {
@@ -184,7 +190,9 @@ svg {
       padding-left: 5%;
       padding-right: 5%; }
       .header span {
-        font-size: 16px; } }
+        font-size: 16px; }
+      .header li:nth-child(1) {
+        width: 340px; } }
   @media screen and (min-width: 1600px) {
     .header {
       padding-left: 10%;
@@ -199,7 +207,7 @@ svg {
       min-width: 280px; } }
   @media screen and (min-width: 1280px) {
     .logo {
-      min-width: 320px; } }
+      min-width: 340px; } }
 
 .logo-at {
   display: block;
@@ -423,7 +431,7 @@ svg {
   width: 100vw;
   pointer-events: none; }
   .share .list {
-    padding: 10px;
+    padding: 20px 10px;
     background-color: #fff;
     transform: translate3d(100%, 0, 0);
     transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1); }
@@ -434,7 +442,7 @@ svg {
       margin: 0 auto; }
     .share .list li {
       width: calc(100% / 3 - 20px);
-      margin: 10px; }
+      margin: 0 10px; }
     .share .list.isVisible {
       transform: translate3d(0, 0, 0);
       pointer-events: auto; }
@@ -451,6 +459,8 @@ svg {
       .share .list {
         padding: 0;
         transform: none; }
+        .share .list ul {
+          height: 45px; }
         .share .list li {
           margin: 0 5px; }
         .share .list.isVisible {
@@ -527,3 +537,21 @@ svg {
     .photo {
       margin-right: 40px;
       font-size: 16px; } }
+
+.error {
+  width: 100%;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; }
+  .error h1 {
+    font-size: 32px; }
+  .error a {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 16px; }
+  @media screen and (min-width: 768px) {
+    .error {
+      height: calc(100vh - 110px); } }

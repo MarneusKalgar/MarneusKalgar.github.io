@@ -11,7 +11,7 @@ const nav = () => {
     return (
         <nav className="nav">
             <ul>
-                <li className="isDisabled">
+                <li className="">
                     <NavLink to="/day-one">
                         <p>День 1</p>
                         <span>Активен с 16.05.18</span>

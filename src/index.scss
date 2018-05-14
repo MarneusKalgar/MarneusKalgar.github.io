@@ -104,6 +104,12 @@ svg {
   top: 0;
   left: 0;
   background-color: rgba(0,0,0, 0.5);
+
+  // 768px
+  @media screen and (min-width: 768px) {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 //== END BACKDROP
 
@@ -142,7 +148,6 @@ svg {
   //display: grid;
   //grid-template-columns: 1fr 1fr;
   //grid-template-rows: 1fr;
-  //-ms-grid-rows: 1fr;
   //grid-gap: 10px 10px;
   width: 100%;
   height: 90px;
@@ -159,7 +164,6 @@ svg {
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    //margin: 0 -2.5px;
   }
 
   li {
@@ -244,6 +248,10 @@ svg {
       align-items: center;
       justify-content: center;
       width: auto;
+
+      &:nth-child(1) {
+        width: 280px;
+      }
     }
 
     .row {
@@ -296,6 +304,12 @@ svg {
     span {
       font-size: 16px;
     }
+
+    li {
+      &:nth-child(1) {
+        width: 340px;
+      }
+    }
   }
 
   // >= 1600
@@ -324,9 +338,7 @@ svg {
 
   // >= 1280
   @media screen and (min-width: 1280px) {
-    //width: 30%;
-    min-width: 320px;
-    //padding: 0;
+    min-width: 340px;
   }
 }
 //== END LOGO
@@ -707,7 +719,7 @@ svg {
   pointer-events: none;
 
   .list {
-    padding: 10px;
+    padding: 20px 10px;
     background-color: $color-light;
     transform: translate3d(100%,0,0);
     transition: transform .4s cubic-bezier(0, .52, 0, 1);
@@ -722,7 +734,7 @@ svg {
   
     li {
       width: calc(100% / 3 - 20px);
-      margin: 10px;
+      margin: 0 10px;
     }
 
     &.isVisible {
@@ -752,6 +764,10 @@ svg {
       padding: 0;
       transform: none;
       //transform: translate3d(0, -100%, 0);
+
+      ul {
+        height: 45px;
+      }
 
       li {
         margin: 0 5px;
@@ -894,97 +910,32 @@ svg {
     font-size: 16px;
   }
 }
-// .photo {
-//   position: relative;
-//   width: 30px;
-//   height: 30px;
-//   color: $color-primary;
-// 
-// 
-//   svg {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     fill: $color-primary;
-//   }
-// 
-//   span {
-//     display: none;
-//     font-size: 14px;
-//   }
-// 
-//   // 1024
-//   @media screen and (min-width: 1024px) {
-//     display: flex;
-//     flex-direction: row-reverse;
-//     align-items: center;
-//     width: auto;
-//     margin-right: 10px;
-// 
-//     svg {
-//       display: none;
-//       //position: static;
-//       //transform: none;
-//       //margin-left: 5px;
-//     }
-// 
-//     span {
-//       display: block;
-//       margin-right: 5px;
-//     }
-//   }
-// 
-//   // 1280
-//   @media screen and (min-width: 1280px) {
-//     
-//     span {
-//       font-size: 16px;
-//     }
-//   }
-// }
 //== END PHOTO
 
-//== BEGIN PHOTOS
-// .photos {
-//   position: relative;
-//   cursor: pointer;
-// 
-//   &:hover {
-// 
-//     &::before,
-//     &::after {
-//       visibility: hidden;
-//       opacity: 0;
-//     }
-//   }
-// 
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 6px;
-//     left: 0;
-//     background-color: rgba(#000, .4);
-//     opacity: 1;
-//     visibility: visible;
-//     transition: all .5s ease;
-//   }
-// 
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     width: 100px;
-//     height: 100px;
-//     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOC45MDcgMjguOTA3IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMi42MjUgMjQuMjE1VjUuMjkxSC41MDlBLjUxLjUxIDAgMCAwIDAgNS44djIwLjg5OWEuNTEuNTEgMCAwIDAgLjUwOS41MTFoMjQuMTU1Yy4yODEgMCAuNTEtLjIyOS41MS0uNTExdi0xLjk3NEgzLjEzNmEuNTEuNTEgMCAwIDEtLjUxMS0uNTF6Ii8+PHBhdGggZD0iTTI4LjM5NiAxLjY5OEg0LjI0NGEuNTEuNTEgMCAwIDAtLjUwOS41MDl2MjAuODk4YzAgLjI4Mi4yMjguNTEzLjUwOS41MTNoMjQuMTUzYy4yODEgMCAuNTEtLjIzLjUxLS41MTNWMi4yMDdhLjUxMi41MTIgMCAwIDAtLjUxMS0uNTA5em0tMTcuODk1IDEuOWEyLjcxIDIuNzEgMCAwIDEgMi43MDggMi43MSAyLjcwNiAyLjcwNiAwIDAgMS0yLjcwOCAyLjcwNyAyLjcxIDIuNzEgMCAwIDEgMC01LjQxN3pNMjcuMjUgMTcuMzA2SDUuNjcxdi0uMjA4bDQuMjU4LTQuODY1IDIuMzk2IDEuNjE2IDIuNzkyLTQuNzg1IDMuMjQ0IDIuMyAyLjkzMi02LjA3N0wyNy4yNSAxNy4wOHYuMjI2eiIvPjwvc3ZnPg==') center no-repeat;
-//     background-size: contain;
-//     transform: translate(-50%, -50%);
-//     opacity: 1;
-//     visibility: visible;
-//     transition: all .5s ease;
-//   }
-// }
-//== END PHOTOS
+
+//== BEGIN ERROR
+.error {
+  width: 100%;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  h1 {
+    font-size: 32px;
+  }
+
+  a {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  // 768
+  @media screen and (min-width: 768px) {
+    height: calc(100vh - 110px);
+  }
+}
+//== END ERROR

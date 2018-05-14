@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Header from './Header';
 import Nav from './Nav';
@@ -8,6 +8,7 @@ import DayOne from './Articles/DayOne';
 import DayTwo from './Articles/DayTwo';
 import DayThree from './Articles/DayThree';
 import DayFour from './Articles/DayFour';
+import Page404 from './Page404';
 
 class Exhibition extends Component {
 
@@ -43,11 +44,14 @@ class Exhibition extends Component {
                     show={this.state.showShare} 
                 />
                 <Backdrop show={this.state.showShare}  clicked={this.shareClosedHandler} />
-                <Route path="/" exact component={Nav} />
-                <Route path="/day-one" component={DayOne} />
-                <Route path="/day-two" component={DayTwo} />
-                <Route path="/day-three" component={DayThree} />
-                <Route path="/day-four" component={DayFour} />
+                <Switch>
+                    <Route path="/" exact component={Nav} />
+                    <Route path="/day-one" component={DayOne} />
+                    <Route path="/day-two" component={DayTwo} />
+                    <Route path="/day-three" component={DayThree} />
+                    <Route path="/day-four" component={DayFour} />
+                    <Route component={Page404}/>
+                </Switch>
             </div>
         );
     }
