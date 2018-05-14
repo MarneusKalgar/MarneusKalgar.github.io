@@ -54,10 +54,10 @@ svg {
 }
 
 //== BEGIN APP
-.app {
-  position: relative;
-  z-index: 4;
-}
+//.app {
+  //position: relative;
+  //z-index: 4;
+//}
 //== END APP
 
 
@@ -134,6 +134,12 @@ svg {
   &:focus {
     color: $color-light;
     background-color: $color-primary;
+  }
+
+  &.isDisabled {
+    color: #666;
+    border-color: #666;
+    pointer-events: none;
   }
 }
 //== END BUTTON
@@ -889,12 +895,6 @@ svg {
 .photo {
   //margin: 0 0 10px 0;
   padding: 8px 10px;
-
-  &.isDisabled {
-    color: #666;
-    border-color: #666;
-    pointer-events: none;
-  }
 
   // 1024
   @media screen and (min-width: 1024px) {

@@ -5,9 +5,7 @@ import './index.css';
 import App from './App';
 
 const jsx = (
-  <div className="container">
-      <App />
-  </div>
+    <App />
 );
 
-ReactDOM.render(jsx, document.getElementById('container'));
+ReactDOM.render(jsx, document.getElementById('app'));

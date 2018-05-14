@@ -37,10 +37,6 @@ svg {
   pointer-events: none;
   transition: fill .4s ease; }
 
-.app {
-  position: relative;
-  z-index: 4; }
-
 .container {
   padding-top: 90px;
   overflow: hidden; }
@@ -89,6 +85,10 @@ svg {
   .button:hover, .button:active, .button:focus {
     color: #fff;
     background-color: #005587; }
+  .button.isDisabled {
+    color: #666;
+    border-color: #666;
+    pointer-events: none; }
 
 .header {
   position: fixed;
@@ -523,10 +523,6 @@ svg {
 
 .photo {
   padding: 8px 10px; }
-  .photo.isDisabled {
-    color: #666;
-    border-color: #666;
-    pointer-events: none; }
   @media screen and (min-width: 1024px) {
     .photo {
       height: 45px;
