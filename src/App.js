@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import Header from './Components/Header';
 import Nav from './Components/Nav';
@@ -38,7 +38,7 @@ class App extends Component {
 
     render () {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="container">
                     <Header 
                         shareToggle={this.shareToggleHandler}
@@ -54,7 +54,7 @@ class App extends Component {
                         <Route component={Page404}/>
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         )
     }
 }
