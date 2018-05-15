@@ -627,7 +627,6 @@ svg {
   text-align: left;
   color: $color-text;
   text-align: left;
-  line-height: 1.75;
   // transition: opacity .5s ease;
 
   .subsection {
@@ -668,6 +667,7 @@ svg {
   p {
     margin: 1.5em 0;
     text-align: left;
+    line-height: 2;
     //text-align: justify;
   }
 
