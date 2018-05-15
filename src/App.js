@@ -48,9 +48,9 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={Nav} />
                         <Route path="/day-one" component={DayOne} />
-                        <Route path="/day-two" component={DayTwo} />
+                        {/* <Route path="/day-two" component={DayTwo} />
                         <Route path="/day-three" component={DayThree} />
-                        <Route path="/day-four" component={DayFour} />
+                        <Route path="/day-four" component={DayFour} /> */}
                         <Route component={Page404}/>
                     </Switch>
                 </div>

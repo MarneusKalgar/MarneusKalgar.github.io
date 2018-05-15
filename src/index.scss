@@ -4,6 +4,7 @@ $color-primary: #005587;
 $color-light: #fff;
 $color-dark: #1f1f1f;
 $color-text: #606060;
+$color-disabled: #666;
 
 body {
   text-align: center;
@@ -82,14 +83,23 @@ svg {
 
   // 1024px
   @media screen and (min-width: 1024px) {
-    margin: 0 5%;
+    width: 800px;
+    margin: 0 auto;
+    //margin: 0 5%;
   }
 
   // 1280px
   @media screen and (min-width: 1280px) {
+    width: 950px;
+    margin: 0 auto;
+    //width: 1140px;
+    //margin-left: auto;
+    //margin-right: auto;
+  }
+
+  // 1900px
+  @media screen and (min-width: 1900px) {
     width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 //== END WRAPPER
@@ -137,9 +147,14 @@ svg {
   }
 
   &.isDisabled {
-    color: #666;
-    border-color: #666;
+    color: $color-disabled;
+    border-color: $color-disabled;
     pointer-events: none;
+
+    svg {
+      fill: $color-disabled;
+      stroke: $color-disabled;
+    }
   }
 }
 //== END BUTTON
@@ -432,7 +447,7 @@ svg {
     pointer-events: none;
     transform: scale3d(1, 1, 1);
     transition: all .4s ease;
-    background-size: cover;
+    background-size: auto 130%;
     background-position: 50% 50%;
 
     &::after {
@@ -612,7 +627,7 @@ svg {
   text-align: left;
   color: $color-text;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.75;
   // transition: opacity .5s ease;
 
   .subsection {
@@ -646,11 +661,12 @@ svg {
   }
 
   h3 {
+    margin: 20px 0;
     font-size: 20px;
   }
 
   p {
-    margin: 1em 0;
+    margin: 1.5em 0;
     text-align: left;
     //text-align: justify;
   }
@@ -690,9 +706,9 @@ svg {
     padding: 30px 0 0;
 
     .subsection {
-      width: 80%;
-      max-width: 900px;
-      margin: 0 auto;
+      //width: 80%;
+      //max-width: 900px;
+      //margin: 0 auto;
     }
 
     h1 {
@@ -911,6 +927,19 @@ svg {
   }
 }
 //== END PHOTO
+
+
+//== BEGIN ALBUM-LINK
+.album-link {
+  max-width: 700px;
+
+  p {
+    font-weight: bold;
+    line-height: 1.3;
+    color: $color-dark;
+  }
+}
+//== END ALBUM-LINK
 
 
 //== BEGIN ERROR

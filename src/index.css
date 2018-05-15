@@ -49,12 +49,15 @@ svg {
   padding: 25px 0; }
   @media screen and (min-width: 1024px) {
     .wrapper {
-      margin: 0 5%; } }
+      width: 800px;
+      margin: 0 auto; } }
   @media screen and (min-width: 1280px) {
     .wrapper {
-      width: 1140px;
-      margin-left: auto;
-      margin-right: auto; } }
+      width: 950px;
+      margin: 0 auto; } }
+  @media screen and (min-width: 1900px) {
+    .wrapper {
+      width: 1140px; } }
 
 .backdrop {
   width: 100%;
@@ -89,6 +92,9 @@ svg {
     color: #666;
     border-color: #666;
     pointer-events: none; }
+    .button.isDisabled svg {
+      fill: #666;
+      stroke: #666; }
 
 .header {
   position: fixed;
@@ -260,7 +266,7 @@ svg {
     pointer-events: none;
     transform: scale3d(1, 1, 1);
     transition: all .4s ease;
-    background-size: cover;
+    background-size: auto 130%;
     background-position: 50% 50%; }
     .nav .overlay::after {
       content: '';
@@ -359,7 +365,7 @@ svg {
   text-align: left;
   color: #606060;
   text-align: left;
-  line-height: 1.5; }
+  line-height: 1.75; }
   .article .subsection {
     margin-top: 40px; }
     .article .subsection > ul {
@@ -381,9 +387,10 @@ svg {
     font-size: 30px;
     text-transform: uppercase; }
   .article h3 {
+    margin: 20px 0;
     font-size: 20px; }
   .article p {
-    margin: 1em 0;
+    margin: 1.5em 0;
     text-align: left; }
   .article blockquote {
     position: relative;
@@ -411,10 +418,6 @@ svg {
   @media screen and (min-width: 1024px) {
     .article {
       padding: 30px 0 0; }
-      .article .subsection {
-        width: 80%;
-        max-width: 900px;
-        margin: 0 auto; }
       .article h1 {
         font-size: 36px; }
       .article h3 {
@@ -533,6 +536,13 @@ svg {
     .photo {
       margin-right: 40px;
       font-size: 16px; } }
+
+.album-link {
+  max-width: 700px; }
+  .album-link p {
+    font-weight: bold;
+    line-height: 1.3;
+    color: #1f1f1f; }
 
 .error {
   width: 100%;

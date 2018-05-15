@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import day1 from '../images/articles/aquatherm-STK-2017-001.jpg';
+import day1 from '../images/articles/aquatherm-STK-2018-01.jpg';
 import day2 from '../images/articles/aquatherm-STK-2017-008.jpg';
 import day3 from '../images/articles/aquatherm-STK-2017-040.jpg';
 import day4 from '../images/articles/aquatherm-STK-2017-060.jpg';
@@ -11,7 +11,7 @@ const nav = () => {
     return (
         <nav className="nav">
             <ul>
-                <li className="isDisabled">
+                <li>
                     <NavLink to="/day-one">
                         <p>День 1</p>
                         <span>Активен с 16.05.18</span>

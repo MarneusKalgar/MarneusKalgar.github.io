@@ -25,10 +25,10 @@ const header = (props) => {
                 </li>
                 <li className="row">
                     <a 
-                        href="https://www.flickr.com/photos/161517446@N06/albums" 
+                        href="https://www.flickr.com/photos/161517446@N06/albums/with/72157696861906245" 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="button photo isDisabled">
+                        className="button photo">
                         Фото
                     </a>
                     <button type="button" className={togglerClass} onClick={props.shareToggle}>
