@@ -638,11 +638,12 @@ svg {
       li {
         position: relative;
         padding-left: 20px;
+        line-height: 2;
     
         &::before {
           content: '';
           position: absolute;
-          top: 10px;
+          top: 14px;
           left: 0;
           width: 6px;
           height: 6px;
@@ -660,8 +661,9 @@ svg {
   }
 
   h3 {
+    max-width: 600px;
     margin: 20px 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   p {
@@ -669,6 +671,17 @@ svg {
     text-align: left;
     line-height: 2;
     //text-align: justify;
+  }
+
+  a {
+    color: $color-primary;
+    transition: color .4s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: lighten($color-primary, 10%);
+    }
   }
 
   blockquote {
@@ -715,9 +728,9 @@ svg {
       font-size: 36px;
     }
 
-    h3 {
-      font-size: 24px;
-    }
+    // h3 {
+    //   font-size: 20px;
+    // }
   }
 
   // 1280px
@@ -931,7 +944,7 @@ svg {
 
 //== BEGIN ALBUM-LINK
 .album-link {
-  max-width: 700px;
+  max-width: 500px;
 
   p {
     font-weight: bold;

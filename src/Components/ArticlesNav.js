@@ -9,7 +9,7 @@ const articlesNav = (props) => {
         links = (
             <ul>
                 <li>
-                    <Link to="/day-two" className="button next isDisabled">
+                    <Link to="/day-two" className="button next">
                         <span>День 2</span>
                         {svgIcon}
                     </Link>
@@ -26,7 +26,7 @@ const articlesNav = (props) => {
                 </Link>
                 </li>
                 <li>
-                    <Link to="/day-three" className="button next">
+                    <Link to="/day-three" className="button next isDisabled">
                     <span>День 3</span>
                     {svgIcon}
                 </Link>

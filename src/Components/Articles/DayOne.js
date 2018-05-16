@@ -5,7 +5,7 @@ import AlbumLink from '../AlbumLink';
 
 import mainImage from  '../../images/articles/aquatherm-STK-2018-01.jpg';
 import contentImage1 from '../../images/articles/aquatherm-STK-2018-02.jpg';
-import contentImage2 from '../../images/articles/aquatherm-STK-2018-03.jpg'
+import contentImage2 from '../../images/articles/aquatherm-STK-2018-03.jpg';
 
 export default class DayOne extends Component {
 
@@ -32,6 +32,7 @@ export default class DayOne extends Component {
                     </div>
 
                     <div className="subsection">
+                        <h3>С остальными фотографиями можно ознакомиться, перейдя по ссылке ниже</h3>
                         <AlbumLink href="https://www.flickr.com/photos/161517446@N06/albums/72157696861906245" />
                     </div>
 
