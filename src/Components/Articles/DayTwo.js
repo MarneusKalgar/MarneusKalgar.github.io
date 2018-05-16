@@ -3,9 +3,10 @@ import Breadcrumbs from '../Breadcrumbs';
 import ArticlesNav from '../ArticlesNav';
 import AlbumLink from '../AlbumLink';
 
-import mainImage from  '../../images/articles/aquatherm-STK-2018-04.jpg';
+import mainImage from  '../../images/articles/aquatherm-STK-2018-07.jpg';
 import contentImage1 from '../../images/articles/aquatherm-STK-2018-05.jpg';
-import contentImage2 from '../../images/articles/aquatherm-STK-2018-06.jpg';
+import contentImage2 from '../../images/articles/aquatherm-STK-2018-04.jpg';
+import contentImage3 from '../../images/articles/aquatherm-STK-2018-06.jpg';
 
 export default class DayTwo extends Component {
 
@@ -34,6 +35,7 @@ export default class DayTwo extends Component {
                             <li>отопительное оборудование.</li>
                         </ul>
                         <p>Самые интересные образцы этих направлений расположены на стенде «Сантехкомплект». У нас вы можете не ограничивать себя и смело тестировать продукцию прямо на месте, а опытные специалисты помогут разобраться в нюансах.</p>
+                        <img src={contentImage3} alt="Сантехкомплект"/>
 
                         <p>Если вы еще не успели заглянуть к нам на стенд и пообщаться с нашими симпатичными сотрудниками, то завтра самое время исправить эту ситуацию. Мы ждем вас на стенде 3-F3-9!</p>
                     </div>

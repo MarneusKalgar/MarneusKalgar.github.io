@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import day1 from '../images/articles/aquatherm-STK-2018-01.jpg';
-import day2 from '../images/articles/aquatherm-STK-2018-04.jpg';
+import day2 from '../images/articles/aquatherm-STK-2018-07.jpg';
 import day3 from '../images/articles/aquatherm-STK-2017-040.jpg';
 import day4 from '../images/articles/aquatherm-STK-2017-060.jpg';
 

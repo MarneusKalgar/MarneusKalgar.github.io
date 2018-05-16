@@ -448,7 +448,7 @@ svg {
     transform: scale3d(1, 1, 1);
     transition: all .4s ease;
     background-size: auto 130%;
-    background-position: 50% 50%;
+    background-position: 42% 50%;
 
     &::after {
       content: '';
@@ -597,16 +597,16 @@ svg {
       font-weight: 600;
       color: $color-primary;
     }
-  }
 
-  a {
-    color: inherit;
-    transition: color .4s ease;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: lighten($color-dark, 30%);
+    a {
+      color: inherit;
+      transition: color .4s ease;
+  
+      &:hover,
+      &:active,
+      &:focus {
+        color: lighten($color-dark, 30%);
+      }
     }
   }
 
@@ -670,17 +670,16 @@ svg {
     margin: 1.5em 0;
     text-align: left;
     line-height: 2;
-    //text-align: justify;
-  }
 
-  a {
-    color: $color-primary;
-    transition: color .4s ease;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: lighten($color-primary, 10%);
+    a {
+      color: $color-primary;
+      transition: color .4s ease;
+  
+      &:hover,
+      &:active,
+      &:focus {
+        color: lighten($color-primary, 10%);
+      }
     }
   }
 
