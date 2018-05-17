@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const svgIcon = <svg xmlns="http://www.w3.org/2000/svg" width="11" height="17" viewBox="0 0 370.814 370.814"><path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/></svg>;
+const svgIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="17" viewBox="0 0 370.814 370.814">
+        <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z" />
+    </svg>
+);
 
 const articlesNav = (props) => {
     let links;
@@ -23,13 +27,13 @@ const articlesNav = (props) => {
                     <Link to="/day-one" className="button prev">
                         {svgIcon}
                         <span>День 1</span>
-                </Link>
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/day-three" className="button next isDisabled">
-                    <span>День 3</span>
-                    {svgIcon}
-                </Link>
+                    <Link to="/day-three" className="button next">
+                        <span>День 3</span>
+                        {svgIcon}
+                    </Link>
                 </li>
             </ul>
         );
@@ -43,7 +47,7 @@ const articlesNav = (props) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/day-four" className="button next">
+                    <Link to="/day-four" className="button next isDisabled">
                         <span>День 4</span>
                         {svgIcon}
                     </Link>

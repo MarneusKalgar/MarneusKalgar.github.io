@@ -266,8 +266,9 @@ svg {
     pointer-events: none;
     transform: scale3d(1, 1, 1);
     transition: all .4s ease;
-    background-size: auto 130%;
-    background-position: 42% 50%; }
+    background-size: cover;
+    background-position: 42% 30%;
+    background-repeat: no-repeat; }
     .nav .overlay::after {
       content: '';
       position: absolute;
@@ -360,6 +361,10 @@ svg {
   .breadcrumbs ul {
     margin: 0; } }
 
+@media screen and (min-width: 1900px) {
+  .breadcrumbs ul {
+    font-size: 19px; } }
+
 .article {
   text-align: left;
   color: #606060;
@@ -392,7 +397,8 @@ svg {
   .article p {
     margin: 1.5em 0;
     text-align: left;
-    line-height: 2; }
+    line-height: 2;
+    text-align: justify; }
     .article p a {
       color: #005587;
       transition: color .4s ease; }
@@ -429,6 +435,9 @@ svg {
   @media screen and (min-width: 1280px) {
     .article blockquote {
       font-size: 16px; } }
+  @media screen and (min-width: 1900px) {
+    .article .subsection p {
+      font-size: 18px; } }
 
 .share {
   position: absolute;

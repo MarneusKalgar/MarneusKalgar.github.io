@@ -447,8 +447,10 @@ svg {
     pointer-events: none;
     transform: scale3d(1, 1, 1);
     transition: all .4s ease;
-    background-size: auto 130%;
-    background-position: 42% 50%;
+    //background-size: auto 130%;
+    background-size: cover;
+    background-position: 42% 30%;
+    background-repeat: no-repeat;
 
     &::after {
       content: '';
@@ -501,14 +503,8 @@ svg {
   p {
     display: block;
     margin: 10px;
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
-    //width: 200px;
     font-size: 32px;
     text-shadow: 2px 2px 4px rgba(#000, .7);
-    //background-color: rgba(0,0,0,0);
-    //transition: opacity .4s ease;
   }
 
   // >= 768
@@ -617,6 +613,14 @@ svg {
       margin: 0;
     }
   }
+
+  // 1900px
+  @media screen and (min-width: 1900px) {
+
+    ul {
+      font-size: 19px;
+    }
+  }
 }
 //== END BREADCRUMBS
 
@@ -670,6 +674,7 @@ svg {
     margin: 1.5em 0;
     text-align: left;
     line-height: 2;
+    text-align: justify;
 
     a {
       color: $color-primary;
@@ -737,6 +742,16 @@ svg {
     
     blockquote {
       font-size: 16px;
+    }
+  }
+
+  // 1900px
+  @media screen and (min-width: 1900px) {
+
+    .subsection {
+      p {
+        font-size: 18px;
+      }
     }
   }
 }
