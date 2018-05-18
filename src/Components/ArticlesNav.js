@@ -47,7 +47,7 @@ const articlesNav = (props) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/day-four" className="button next isDisabled">
+                    <Link to="/day-four" className="button next">
                         <span>День 4</span>
                         {svgIcon}
                     </Link>

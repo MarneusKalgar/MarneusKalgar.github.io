@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import day1 from '../images/articles/aquatherm-STK-2018-01.jpg';
 import day2 from '../images/articles/aquatherm-STK-2018-07.jpg';
 import day3 from '../images/articles/aquatherm-STK-2018-08.jpg';
-import day4 from '../images/articles/aquatherm-STK-2017-060.jpg';
+import day4 from '../images/articles/aquatherm-STK-2018-12.jpg';
 
 const nav = () => {
 
@@ -32,7 +32,7 @@ const nav = () => {
                     </NavLink>
                     <div className="overlay" style={{backgroundImage: "url(" + day3 + ")"}} />
                 </li>
-                <li className="isDisabled">
+                <li>
                     <NavLink to="/day-four">
                         <p>День 4</p>
                         <span>Активен с 19.05.18</span>

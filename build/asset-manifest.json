@@ -1,10 +1,9 @@
 {
   "main.css": "static/css/main.caf122ce.css",
   "main.css.map": "static/css/main.caf122ce.css.map",
-  "main.js": "static/js/main.5369cff1.js",
-  "main.js.map": "static/js/main.5369cff1.js.map",
+  "main.js": "static/js/main.9fcbae3a.js",
+  "main.js.map": "static/js/main.9fcbae3a.js.map",
   "static\\media\\album-link-bg.jpg": "static/media/album-link-bg.0b97bbc4.jpg",
-  "static\\media\\aquatherm-STK-2017-060.jpg": "static/media/aquatherm-STK-2017-060.91cc395c.jpg",
   "static\\media\\aquatherm-STK-2018-01.jpg": "static/media/aquatherm-STK-2018-01.623a0c92.jpg",
   "static\\media\\aquatherm-STK-2018-02.jpg": "static/media/aquatherm-STK-2018-02.14c3cd09.jpg",
   "static\\media\\aquatherm-STK-2018-03.jpg": "static/media/aquatherm-STK-2018-03.a2030be5.jpg",
@@ -16,6 +15,10 @@
   "static\\media\\aquatherm-STK-2018-09.jpg": "static/media/aquatherm-STK-2018-09.2cad5344.jpg",
   "static\\media\\aquatherm-STK-2018-10.jpg": "static/media/aquatherm-STK-2018-10.5b560d74.jpg",
   "static\\media\\aquatherm-STK-2018-11.jpg": "static/media/aquatherm-STK-2018-11.d2b62092.jpg",
+  "static\\media\\aquatherm-STK-2018-12.jpg": "static/media/aquatherm-STK-2018-12.d7cbe55d.jpg",
+  "static\\media\\aquatherm-STK-2018-13.jpg": "static/media/aquatherm-STK-2018-13.a90838ac.jpg",
+  "static\\media\\aquatherm-STK-2018-14.jpg": "static/media/aquatherm-STK-2018-14.b664ce7d.jpg",
+  "static\\media\\aquatherm-STK-2018-15.jpg": "static/media/aquatherm-STK-2018-15.d1b0b62e.jpg",
   "static\\media\\aquatherm-logo.png": "static/media/aquatherm-logo.c7322b91.png",
   "static\\media\\logo.svg": "static/media/logo.94e1e837.svg"
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Breadcrumbs from '../Breadcrumbs';
 import ArticlesNav from '../ArticlesNav';
 import AlbumLink from '../AlbumLink';
+import Footer from '../Footer';
 
 import mainImage from  '../../images/articles/aquatherm-STK-2018-07.jpg';
 import contentImage1 from '../../images/articles/aquatherm-STK-2018-05.jpg';
@@ -49,11 +50,8 @@ export default class DayTwo extends Component {
                         <ArticlesNav prev="one" next="three" />
                     </div>
                 </div>
-                <footer>
-                    <div className="wrapper">
-                        <p>&copy; 2018 Сантехкомплект.</p>
-                    </div>
-                </footer>
+                
+                <Footer />
             </article>
         );
     }
